@@ -108,15 +108,15 @@ def pairwise_interpolate_predictions(
 
     # for idx, point_from_j in tqdm(enumerate(reprojected_j)):
     #     point_nn_indexes = nn_indexes_in_i[idx]
-    #     # Build an [n, 3] array of XYZ coordinates for each reprojected point by taking
-    #     # UV values from pixel grid and Z value from depth image.
-    #     # TODO: your code here: use `point_nn_indexes` found previously
-    #     #  and distance values from `image_i` indexed by the same `point_nn_indexes`
+        # Build an [n, 3] array of XYZ coordinates for each reprojected point by taking
+        # UV values from pixel grid and Z value from depth image.
+        # TODO: your code here: use `point_nn_indexes` found previously
+        #  and distance values from `image_i` indexed by the same `point_nn_indexes`
     #     point_from_j_nns = np.hstack([uv_i[point_nn_indexes], image_i.flatten()[point_nn_indexes].reshape(-1, 1)])
 
-    #     # TODO: compute a flag indicating the possibility to interpolate
-    #     #  by checking distance between `point_from_j` and its `point_from_j_nns`
-    #     #  against the value of `distance_interpolation_threshold`
+        # TODO: compute a flag indicating the possibility to interpolate
+        #  by checking distance between `point_from_j` and its `point_from_j_nns`
+        #  against the value of `distance_interpolation_threshold`
     #     distances_to_nearest = np.linalg.norm(point_from_j_nns - point_from_j, ord=2, axis=1)
     #     interp_mask[idx] = np.min(distances_to_nearest) < distance_interpolation_threshold
 
