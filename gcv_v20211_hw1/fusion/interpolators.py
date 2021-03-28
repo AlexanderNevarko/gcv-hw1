@@ -96,10 +96,6 @@ def pairwise_interpolate_predictions(
     interp_mask = np.zeros(len(reprojected_j)).astype(bool)
     # Distances to be produces as output.
     distances_j_interp = np.zeros(len(points_j), dtype=float)
-    # import ipdb; ipdb.set_trace()
-    nearest_points_z = image_i.flatten()[nn_indexes_in_i]
-    # points_from_j_nn
-    # s = np.stack([uv_i, image_i])
 
     distances_to_nearest = np.sqrt(np.power(distances_2d, 2) + 
                                    np.power(reprojected_j[:, 2][:, None] - 
