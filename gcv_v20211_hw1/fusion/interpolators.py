@@ -88,7 +88,7 @@ def pairwise_interpolate_predictions(
     #  nearest points for each of points from `reprojected_j`
     uv_i = imaging_i.rays_origins[:, :2]
     kdtree = cKDTree(uv_i)
-    distances_2d, nn_indexes_in_i = kdtree.query(reprojected_j[:, :2], k=nn_set_size, workers=-1)
+    distances_2d, nn_indexes_in_i = kdtree.query(reprojected_j[:, :2], k=nn_set_size)
 
     # Create interpolation mask: True for points which
     # can be stably interpolated (i.e. they have K neighbours present
